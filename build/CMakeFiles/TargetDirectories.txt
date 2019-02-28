@@ -1,3 +1,0 @@
-/home/agah/Desktop/RTHawk/dene/build/CMakeFiles/rebuild_cache.dir
-/home/agah/Desktop/RTHawk/dene/build/CMakeFiles/edit_cache.dir
-/home/agah/Desktop/RTHawk/dene/build/CMakeFiles/EngineExampleCpp.dir

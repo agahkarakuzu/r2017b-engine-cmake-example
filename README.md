@@ -1,4 +1,4 @@
-## Compile a simple code that uses MATLAB API for C++
+## Compile a simple code that uses MATLAB API for C++ using CMake
 
 * Matlab version: R2017b (and newer)  
 * CMake version: 3.13.4  
@@ -10,12 +10,50 @@
 
 **If your MATLAB version is R2017b**
 
-Just comment in the following: 
+Just uncomment [this line](https://github.com/agahkarakuzu/r2017b-engine-cmake-example/blob/05713a658e053fecd60d90803dc28f0fef7b21fa/CMakeLists.txt#L5) in `CmakeLists.txt`.  
 
-xxx
-
-This will use the `FindMatlab.cmake` present in the folder instead of the one located at `/usr/local/share/cmake-3.13/Modules/`. This file is copied from the next CMake version and neccesary changes were made to link C++ API libraries from R2017b to rhe project. 
+This will use the `FindMatlab.cmake` present in the folder instead of the one located at `/usr/local/share/cmake-3.13/Modules/`. The file is originally copied from the next CMake version and neccesary changes were made to link C++ API libraries from R2017b to the project. 
 
 *** 
 
+You can simply follow thsese steps for building: 
+
+* Navigate to the `r2017b-engine-cmake-example` folder:
+
+```
+cd /r2017b-engine-cmake-example
+```
+* Ensure that you are using correct compilers:
+
+```
+export CC = /usr/bin/gcc-4.9
+export CXX = /usr/bin/g++-4.9
+```
+
+You can change gcc/g++ versions depending on your MATLAB version.
+
+* Build: 
+
+```
+mkdir build 
+cd build 
+cmake .. 
+make 
+```
+If runs smoothly, this will build example and create an executable `EngineExampleCpp` in `/build` directory.
+
+* Run:
+
+```
+./EngineExampleCpp
+```
+
+* Expected output:
+
+```
+Square root of -2 is 0 + 1.41421i
+Square root of 2 is 1.41421 + 0i
+Square root of 6 is 2.44949 + 0i
+Square root of 8 is 2.82843 + 0i
+```
 

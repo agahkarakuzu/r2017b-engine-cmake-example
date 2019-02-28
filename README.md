@@ -30,7 +30,7 @@ export CC = /usr/bin/gcc-4.9
 export CXX = /usr/bin/g++-4.9
 ```
 
-You can change gcc/g++ versions depending on your MARLAB version.
+You can change gcc/g++ versions depending on your MATLAB version.
 
 * Build: 
 

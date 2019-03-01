@@ -57,3 +57,11 @@ Square root of 6 is 2.44949 + 0i
 Square root of 8 is 2.82843 + 0i
 ```
 
+If you are running into issues, you can try adding `/usr/lib/x86_64-linux-gnu/libstdc++.so.6` to `LD_PRELOAD` in `~/.bashrc`. Note that this is a bit dirty hack.  
+
+```
+export LD_PRELOAD = "/usr/lib/x86_64-linux-gnu/libstdc++.so.6:$LD_PRELOAD"
+```
+
+
+
